@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+</head>
+<body onload="startTime()">
+    <!-- Navigation -->
+    <nav>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a class="active" href="register.html">Sign In/Up</a>
+            <a class="active" style="float: right;" id="clock"></a>
+          </div>
+    </nav>
+    <!-- Register Form -->
+    <section class="container">
+        <div class="reg__container">
+            <form method="POST" class="reg_form" id="reg_form">
+                <div class="reg_head">Sign up</div>
+                <div class="input_field">
+                    <!-- <label for="username">Full Name</label> -->
+                    <input class="form_input"type="text" placeholder="Your Name" name="username" id="username" required>
+                </div>
+
+                <div class="input_field">
+                    <!-- <label for="username">Email</label> -->
+                    <input class="form_input"type="email" placeholder="Your Email" name="email" id="email" required>
+                </div>
+
+                <div class="input_field">
+                    <!-- <label for="username">Contact No.</label> -->
+                    <input class="form_input"type="tel" placeholder="Contact No." name="phone" id="phone"required>
+                </div>
+
+                <div class="input_field">
+                    <!-- <label for="username">Password</label> -->
+                    <input placeholder="Password"  class="form_input"type="password" name="password" id="password" required>
+                </div>
+
+                <div class="input_field">
+                    <!-- <label for="username">Gender</label> -->
+                    <select name="gender" id="gender" class="custom_select"required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input_field">
+                    <!-- <label for="username">Date of Birth</label> -->
+                    <input placeholder="Date of Birth" class="custom_select" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" required>
+                </div>
+
+                <button type="submit"class="btn_submit">Submit</button>
+            </form>
+            
+            <div class="side_img">
+                <img class="img__css"src="/login_back2.jpg" alt="">
+                <a href="login.html" class="link">Already Signed In?</a>
+            </div>
+
+        </div>    
+    </section>
+</body>
+    <script src="/js/app.js"></script>
+    <script>
+        function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('clock').innerHTML =
+          h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+</html>

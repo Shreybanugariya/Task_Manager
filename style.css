@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background:linear-gradient(120deg, rgb(51, 87, 245), rgb(29, 148, 245));
+}
+.task_form, header{
+    font-size: 1.22rem;
+    color: #fff;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home_section{
+    margin:8rem 0;
+    color: #fff;
+}
+.home_info{
+    margin-top: 5rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.link{
+    margin-top: 1.5rem;
+    color:darkblue;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.home_title{
+    font-size: 3.5rem;
+    font-weight: 600;
+    word-spacing: 0.8rem;
+    letter-spacing: 0.2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.sub-title{
+    font-size: 2rem;
+    word-spacing: 0.8rem;
+    letter-spacing: 0.3rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.container{
+    background:linear-gradient(120deg, rgb(51, 87, 245), rgb(29, 148, 245));
+    padding: 1rem;
+}
+.reg__container{
+    width: 900px;
+    background: #fff;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 16.83px 0.17px rgb(0 0 0 / 5%);
+    border-radius: 20px;
+    padding: 5rem;
+}
+
+.reg_head{
+    line-height: 1.66;
+    margin-bottom: 33px;
+    padding: 0;
+    font-weight: 700;
+    color: #222;
+    font-size: 36px;
+    display: block !important;
+}
+.reg_form{
+    padding-left: 1.2rem;
+    width: 50%;
+    overflow: hidden;
+}
+.input_field{
+    font-size: 0.8rem;
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.input_field .custom_select{
+    position: relative;
+    width: 100%;
+    height: 37px;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+}
+::placeholder{
+    font-size: 0.9rem;
+    font-weight: 600 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.form_input{
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    margin: 0.5rem 0;
+    font-size: 1rem !important;
+    font-weight: 500;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-appearance: unset!important;
+}
+
+.btn_submit{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px; 
+    border: 0px;
+    background:  #0755fe;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+
+.side_img{
+   margin: 0 5.5rem;
+   margin-left: 6.5rem;
+   width: 50%;
+   height: 50%;
+   overflow: hidden;
+   background-attachment: fixed;
+   background-size: cover;
+}   
+
+/* *****************Nav CSS*********************** */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #111;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(80, 182, 241);
+    color: #fff;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: rgb(7, 158, 245);
+    color: #fff;
+  }
+/* *********************************************** */
+  /* Todo */
+.task_form input,
+.task_form button {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  background: white;
+  outline: none;
+}
+.task_form button {
+  color: blue;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  background: #f7fffe;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: rgb(6, 3, 182);
+  color: white;
+}
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+}
+.filter-todo {
+    padding: 0.5rem;
+}
+.todo li {
+    flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+    background: rgb(250, 87, 58);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn {
+    background: rgb(6, 247, 6);
+}
+.todo-item {
+    padding: 0rem 0.5rem;
+    }
+
+.fall {
+    transform: translateX(10rem) rotateY(20deg);
+    opacity: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* Custom Select */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+}
+
+.gif{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Task Manager</title>
+    </head>
+
+<body onload="startTime()">
+    <!-- Navigation -->
+    <nav>
+        <div class="topnav">
+            <a href="/index.html">Home</a>
+            <a href="register.html">Sign In/Up</a>
+            <a href="profile.html">Dashboard</a>
+            <a class="active" href="task.html">Your Tasks</a>
+            <a class="active" style="float: right;"id="clock"></a>
+            <a class="active" style="float: right;" id="logout">Logout</a>
+          </div>
+    </nav>
+    
+    <div style="text-align: center; border-radius: 5rem; padding: 1rem; background-color: white; margin: 5rem; margin-top: 1rem 0;">
+        <h1 style="margin: 1rem 0;" id="temperature"></h1>
+        <h2 style="margin: 1rem 0;" id="description"></h2>
+        <p style="margin-top: 1rem;" id="location"></p>
+    </div>
+    <header>
+        <h1 class="user_header">Your Tasks</h1>
+    </header>
+
+    <form class="task_form">
+        <input type="text" class="todo-input" />
+        <button class="todo-button" type="submit">+</button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">Your tasks</option>
+                <option value="completed">Completed Task</option>
+                <option value="uncompleted">Uncompleted Task</option>
+            </select>
+        </div>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+
+    <iframe class="card gif"  id="myImg" class="myImg"> </iframe>
+</body>
+    <script src="/js/task.js"></script>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+            document.getElementById('clock').innerHTML =
+            h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+        }
+        </script>
+</html>
